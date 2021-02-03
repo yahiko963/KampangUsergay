@@ -103,20 +103,17 @@ if userge.has_bot:
                 await asyncio.sleep(e.x)
             except BadRequest:
                 pass
-            ping = "𝕻𝖎𝖓𝖌:  🐨  {} sec\n"
-        alive_s = "➕ 𝕰𝖝𝖙𝖗𝖆 𝕻𝖑𝖚𝖌𝖎𝖓𝖘 : {}\n".format(
+            ping = "𝗣𝗶𝗻𝗴:  🐨  {} sec\n"
+        alive_s = "➕ 𝗘𝘅𝘁𝗿𝗮 𝗣𝗹𝘂𝗴𝗶𝗻𝘀 : {}\n".format(
             _parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)
         )
-        alive_s += f"👥 𝕾𝖚𝖉𝖔
- : {_parse_arg(Config.SUDO_ENABLED)}\n"
-        alive_s += f"🚫 𝕬𝖓𝖙𝖎𝖘𝖕𝖆𝖒 : {_parse_arg(Config.ANTISPAM_SENTRY)}\n"
+        alive_s += f"👥 𝗦𝘂𝗱𝗼 : {_parse_arg(Config.SUDO_ENABLED)}\n"
+        alive_s += f"🚫 𝗔𝗻𝘁𝗶𝘀𝗽𝗮𝗺 : {_parse_arg(Config.ANTISPAM_SENTRY)}\n"
         if Config.HEROKU_APP and Config.RUN_DYNO_SAVER:
-            alive_s += "⛽️ 𝕯𝖞𝖓𝖔 𝕾𝖆𝖛𝖊𝖗 :  ✅ αктιƒ\n"
-        alive_s += f"💬 𝕭𝖔𝖙 𝕱𝖔𝖗𝖜𝖆𝖗𝖉𝖘 : {_parse_arg(Config.BOT_FORWARDS)}\n"
-        alive_s += f"🛡 𝕻𝕸 𝕲𝖚𝖆𝖗𝖉
- : {_parse_arg(not Config.ALLOW_ALL_PMS)}\n"
-        alive_s += f"📝 𝕻𝕸 𝕷𝖔𝖌𝖌𝖊𝖗
- : {_parse_arg(Config.PM_LOGGING)}"
+            alive_s += "⛽️ 𝗗𝘆𝗻𝗼 𝗦𝗮𝘃𝗲𝗿 :  ✅ 𝙴𝚗𝚊𝚋𝚕𝚎𝚍\n"
+        alive_s += f"💬 𝗕𝗼𝘁 𝗙𝗼𝗿𝘄𝗮𝗿𝗱𝘀 : {_parse_arg(Config.BOT_FORWARDS)}\n"
+        alive_s += f"🛡 𝗣𝗠 𝗚𝘂𝗮𝗿𝗱 : {_parse_arg(not Config.ALLOW_ALL_PMS)}\n"
+        alive_s += f"📝 𝗣𝗠 𝗟𝗼𝗴𝗴𝗲𝗿 : {_parse_arg(Config.PM_LOGGING)}"
         if allow:
             end = datetime.now()
             m_s = (end - start).microseconds / 1000

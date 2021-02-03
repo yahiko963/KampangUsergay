@@ -16,10 +16,10 @@ AUTH_USERS = list(Config.OWNER_ID) + list(Config.SUDO_USERS)
 COMMANDS = {
     "secret": {
         "help_txt": "**Send a secret message to a user**\n (only the entered user and you can view the message)\n\n>>>  `secret @username [text]`",
-        "i_q": "secret @DeletedUser420 This is a secret message",
+        "i_q": "secret @mixiologist This is a secret message",
     },
     "alive": {
-        "help_txt": "**Alive Command for USERGE-X**\nHere You can view Uptime, Setting and Versions of your bot and when you change settings they are updated in Real-time UwU\n\n>>>  `alive`",
+        "help_txt": "**Alive Command for KampangUsergay**\nHere You can view Uptime, Setting and Versions of your bot and when you change settings they are updated in Real-time UwU\n\n>>>  `alive`",
         "i_q": "alive",
     },
     "opinion": {
@@ -27,7 +27,7 @@ COMMANDS = {
         "i_q": "op Are Cats Cute ?",
     },
     "repo": {
-        "help_txt": "**Your USERGE-X Github repo**\nwith direct deploy button\n\n>>>  `repo`",
+        "help_txt": "**Your KampangUsergay Github repo**\nwith direct deploy button\n\n>>>  `repo`",
         "i_q": "repo",
     },
     "gapps": {
@@ -48,7 +48,7 @@ COMMANDS = {
     },
     "stylish": {
         "help_txt": "**Write it in Style**\nplugin to decorate text with unicode fonts.\n\n>>>  `stylish [text]`",
-        "i_q": "stylish USERGE-X",
+        "i_q": "stylish KampangUsergay",
     },
     "ytdl": {
         "help_txt": f"**Download YouTube Videos or Audio with Buttons**\nTo Download Video / Audio from youtube with desired quality.\n\n>>>  `ytdl [URL or Text]\n   Non-Inline: {Config.CMD_TRIGGER}iytdl [URL / Text] or [Reply to URL / Text]`",

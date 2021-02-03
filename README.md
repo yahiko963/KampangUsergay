@@ -1,33 +1,20 @@
-<h2 align="center"><b>Owner: <a href="https://telegram.dog/deleteduser420">𝚂𝚢𝚗𝚝𝚊𝚡 ░ Σrr♢r</a></b></h2>
+<h2 align="center"><b>MENAGE: <a href="https://telegram.dog/mixiologist">KOALA ░ 🐨</a></b></h2>
 <br>
 <p align="center">
-   <a href="https://github.com/code-rgb/USERGE-X"><img src="https://i.imgur.com/53mdl2v.png" alt="Userge-x" width=400px></a>
+   <a href="https://github.com/Camel07/KampangUsergay"><img src="https://media0.giphy.com/media/Hs0cX9Z3RR77c0MMA7/giphy.gif" alt="KampangUsergay" width=400px></a>
    <br>
    <br>
 </p>
-<h1>USERGE-X</h1>
-<b>Pluggable Telegram UserBot</b>
+<h1>KampangUsergay</h1>
+<b>BOT TERKAMPANG ASUU!</b>
 <br>
 <br>
 
-[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/code-rgb/userge-x)
-[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg?&style=flat-square)](https://github.com/code-rgb/USERGE-X#copyright--license)
-[![Stars](https://img.shields.io/github/stars/code-rgb/USERGE-X?&style=flat-square)](https://github.com/code-rgb/USERGE-X/stargazers)
-[![Forks](https://img.shields.io/github/forks/code-rgb/USERGE-X?&style=flat-square)](https://github.com/code-rgb/USERGE-X/network/members)
-[![Issues Open](https://img.shields.io/github/issues/code-rgb/USERGE-X?&style=flat-square)](https://github.com/code-rgb/USERGE-X/issues)
-[![Issues Closed](https://img.shields.io/github/issues-closed/code-rgb/USERGE-X?&style=flat-square)](https://github.com/code-rgb/USERGE-X/issues?q=is:closed)
-[![PR Open](https://img.shields.io/github/issues-pr/code-rgb/USERGE-X?&style=flat-square)](https://github.com/code-rgb/USERGE-X/pulls)
-[![PR Closed](https://img.shields.io/github/issues-pr-closed/code-rgb/USERGE-X?&style=flat-square)](https://github.com/code-rgb/USERGE-X/pulls?q=is:closed)
-![Repo Size](https://img.shields.io/github/repo-size/code-rgb/userge-x?style=flat-square)
-[![CodeFactor](https://www.codefactor.io/repository/github/code-rgb/userge-x/badge?&style=flat-square)](https://www.codefactor.io/repository/github/code-rgb/userge-x)
-[![DeepSource](https://deepsource.io/gh/code-rgb/userge-x.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/code-rgb/userge-x/?ref=repository-badge)
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod&style=flat-square)](https://gitpod.io/#https://github.com/code-rgb/userge-x)
-<br>
 
-**USERGE-X** is a Powerful , _Pluggable_ Telegram UserBot written in _Python_ using [Pyrogram](https://github.com/pyrogram/pyrogram).
+**KampangUsergay** is a Powerful , _Pluggable_ Telegram UserBot written in _Python_ using [Pyrogram](https://github.com/pyrogram/pyrogram).
 <br>
 <p align="center">
-    <a href="https://telegram.dog/x_xtests"><img src="https://img.shields.io/badge/Support%20Group-USERGE--%F0%9D%91%BF-blue?&logo=telegram&style=social" width=220px></a></p>
+    <a href="https://telegram.dog/caritemanhidop"><img src="https://telegra.ph/file/b28a3909df2e46bab6458.jpg" width=220px></a></p>
 
 ## Disclaimer
 ```
@@ -56,7 +43,7 @@
 ## How To Deploy 
 * With Heroku:
 <p align="center">
-   <a href = "https://heroku.com/deploy?template=https://github.com/code-rgb/USERGE-X/tree/alpha"><img src="https://telegra.ph/file/57c4edb389224c9cf9996.png" alt="Press to Takeoff" width="490px"></a>
+   <a href = "https://heroku.com/deploy?template=https://github.com/Camel07/UsergayKampang/tree/alpha"><img src="https://telegra.ph/file/34fa325c222a70badb02f.jpg" alt="Press to Takeoff" width="490px"></a>
 </p>
 <br>
 
@@ -71,7 +58,7 @@
 #### By HEROKU
 - [open your app](https://dashboard.heroku.com/apps/) then go to **more** -> **run console** and type `bash genStr` and click **run**.
 #### On REPL
-- [Generate on REPL](https://repl.it/@Leorio/stringsessiongen#main.py)
+- [Generate on REPL Click](https://repl.it/@ManusiaRakitan/stringsession#README.md)
 ### Read more
 <details>
   <summary><b>Details and Guides</b></summary>
@@ -79,12 +66,12 @@
 ## Other Ways
 
 * With Docker 🐳 
-    <a href="https://github.com/code-rgb/USERGE-X/blob/alpha/resources/readmeDocker.md"><b>See Detailed Guide</b></a>
+    <a href="https://github.com/Camel07/UsergayKampang/blob/alpha/resources/readmeDocker.md"><b>See Detailed Guide</b></a>
 
 * With Git, Python and pip 🔧
   ```bash
   # clone the repo
-  git clone https://github.com/code-rgb/userge-x.git
+  git clone https://github.com/camel07/usergaykampang.git
   cd userge-x
 
   # create virtualenv
@@ -100,7 +87,7 @@
   # get string session and add it to config.env
   bash genStr
 
-  # finally run the USERGE-X ;)
+  # finally run the UsergayKampang ;)
   bash run
   ```
 
@@ -168,5 +155,6 @@ async def test_filter(message: Message):
 * [PyroGramBot](https://github.com/SpEcHiDe/PyroGramBot)
 * [PaperPlane](https://github.com/RaphielGang/Telegram-Paperplane)
 * [Uniborg](https://github.com/SpEcHiDe/UniBorg)
+* [UsergeTeam](https://github.com/UsergeTeam/Userge)
 ### Copyright & License 
 [**GNU General Public License v3.0**](https://github.com/code-rgb/USERGE-X/blob/alpha/LICENSE)

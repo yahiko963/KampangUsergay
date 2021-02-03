@@ -45,7 +45,7 @@ CHANNEL = userge.getCLogger(__name__)
 MEDIA_TYPE, MEDIA_URL = None, None
 PATH = "userge/xcache"
 _CATEGORY = {
-    "admin": "🙋🏻‍♂️",
+    "admin": "👑",
     "fun": "🎨",
     "misc": "🧩",
     "tools": "🧰",
@@ -53,27 +53,27 @@ _CATEGORY = {
     "unofficial": "➕",
     "temp": "♻️",
     "plugins": "💎",
-    "bot": "💠",
+    "bot": "🐨",
 }
 # Database
 SAVED_SETTINGS = get_collection("CONFIGS")
 REPO_X = InlineQueryResultArticle(
     title="Repo",
     input_message_content=InputTextMessageContent("**Here's how to setup USERGE-X** "),
-    url="https://github.com/code-rgb/USERGE-X",
+    url="https://github.com/Camel07/KampangUsergay",
     description="Setup Your Own",
-    thumb_url="https://i.imgur.com/1xsOo9o.png",
+    thumb_url="https://m.imgur.com/gallery/VVxcfEW",
     reply_markup=InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    "🔥 USERGE-X Repo", url="https://github.com/code-rgb/USERGE-X"
+                    "🐨 KampangUsergay Repo", url="https://github.com/code-rgb/USERGE-X"
                 ),
                 InlineKeyboardButton(
-                    "🚀 Deploy USERGE-X",
+                    "🔥 Deploy KampangUsergay",
                     url=(
                         "https://heroku.com/deploy?template="
-                        "https://github.com/code-rgb/USERGE-X/tree/alpha"
+                        "https://github.com/Camel07/KampangUsergay/tree/alpha"
                     ),
                 ),
             ]
@@ -215,7 +215,7 @@ if userge.has_bot:
             await callback_query.answer("you are in main menu", show_alert=True)
             return
         if len(pos_list) == 2:
-            text = " 𝐔𝐒𝐄𝐑𝐆𝐄-𝐗  𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨"
+            text = " 🐨 𝕶𝖆𝖒𝖕𝖆𝖓𝖌𝖀𝖘𝖊𝖗𝖌𝖆𝖞 𝕸𝖆𝖎𝖓 𝕸𝖊𝖓𝖚 🐨"
             buttons = main_menu_buttons()
         elif len(pos_list) == 3:
             text, buttons = category_data(cur_pos)
@@ -288,12 +288,12 @@ if userge.has_bot:
 
         await xbot.edit_inline_text(
             callback_query.inline_message_id,
-            text=" 𝐔𝐒𝐄𝐑𝐆𝐄-𝐗  𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨 ",
+            text="  🐨 𝕶𝖆𝖒𝖕𝖆𝖓𝖌𝖀𝖘𝖊𝖗𝖌𝖆𝖞 𝕸𝖆𝖎𝖓 𝕸𝖊𝖓𝖚 🐨 ",
             reply_markup=InlineKeyboardMarkup(main_menu_buttons()),
         )
 
         # await callback_query.edit_message_text(
-        #     " 𝐔𝐒𝐄𝐑𝐆𝐄-𝐗  𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨 ",
+        #     "  🐨 𝕶𝖆𝖒𝖕𝖆𝖓𝖌𝖀𝖘𝖊𝖗𝖌𝖆𝖞 𝕸𝖆𝖎𝖓 𝕸𝖊𝖓𝖚 🐨 ",
         #     reply_markup=InlineKeyboardMarkup(main_menu_buttons()),
         # )
 
@@ -571,14 +571,14 @@ if userge.has_bot:
                 owner = [
                     [
                         InlineKeyboardButton(
-                            text="Contact", url="https://t.me/deleteduser420"
+                            text="Contact", url="https://t.me/mixiologist"
                         )
                     ]
                 ]
                 results.append(
                     InlineQueryResultPhoto(
                         photo_url="https://coverfiles.alphacoders.com/123/123388.png",
-                        caption="Hey I solved **𝚂𝚢𝚗𝚝𝚊𝚡's ░ Σrr♢r**",
+                        caption="Hey I solved **KOALA ░ 🐨**",
                         reply_markup=InlineKeyboardMarkup(owner),
                     )
                 )
@@ -741,7 +741,7 @@ if userge.has_bot:
                     else:
                         results.append(
                             InlineQueryResultCachedDocument(
-                                title="USERGE-X",
+                                title="KampangUsergay",
                                 file_id=MEDIA_URL,
                                 caption=alive_info,
                                 description="ALIVE",
@@ -751,7 +751,7 @@ if userge.has_bot:
                 elif MEDIA_TYPE == "no_media":
                     results.append(
                         InlineQueryResultArticle(
-                            title="USERGE-X",
+                            title="KampangUsergay",
                             input_message_content=InputTextMessageContent(
                                 alive_info, disable_web_page_preview=True
                             ),
@@ -839,7 +839,7 @@ if userge.has_bot:
             if len(string_split) == 2 and (string_split[0] == "ofox"):
                 codename = string_split[1]
                 t = TelegraphPoster(use_api=True)
-                t.create_api_token("Userge-X")
+                t.create_api_token("KampangUsergay")
                 photo = "https://i.imgur.com/582uaSk.png"
                 api_host = "https://api.orangefox.download/v2/device/"
                 try:

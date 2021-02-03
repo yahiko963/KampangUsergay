@@ -103,17 +103,20 @@ if userge.has_bot:
                 await asyncio.sleep(e.x)
             except BadRequest:
                 pass
-            ping = "𝗣𝗶𝗻𝗴:  🏓  {} sec\n"
-        alive_s = "➕ 𝗘𝘅𝘁𝗿𝗮 𝗣𝗹𝘂𝗴𝗶𝗻𝘀 : {}\n".format(
+            ping = "ριηg:  🐨  {} sec\n"
+        alive_s = "➕ єχтяα ρℓυgιηѕ : {}\n".format(
             _parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)
         )
-        alive_s += f"👥 𝗦𝘂𝗱𝗼 : {_parse_arg(Config.SUDO_ENABLED)}\n"
-        alive_s += f"🚨 𝗔𝗻𝘁𝗶𝘀𝗽𝗮𝗺 : {_parse_arg(Config.ANTISPAM_SENTRY)}\n"
+        alive_s += f"👥 ѕυ∂σ
+ : {_parse_arg(Config.SUDO_ENABLED)}\n"
+        alive_s += f"🚫 αηтιѕραм : {_parse_arg(Config.ANTISPAM_SENTRY)}\n"
         if Config.HEROKU_APP and Config.RUN_DYNO_SAVER:
-            alive_s += "⛽️ 𝗗𝘆𝗻𝗼 𝗦𝗮𝘃𝗲𝗿 :  ✅ 𝙴𝚗𝚊𝚋𝚕𝚎𝚍\n"
-        alive_s += f"💬 𝗕𝗼𝘁 𝗙𝗼𝗿𝘄𝗮𝗿𝗱𝘀 : {_parse_arg(Config.BOT_FORWARDS)}\n"
-        alive_s += f"🛡 𝗣𝗠 𝗚𝘂𝗮𝗿𝗱 : {_parse_arg(not Config.ALLOW_ALL_PMS)}\n"
-        alive_s += f"📝 𝗣𝗠 𝗟𝗼𝗴𝗴𝗲𝗿 : {_parse_arg(Config.PM_LOGGING)}"
+            alive_s += "⛽️ ∂уησ ѕανєя :  ✅ αктιƒ\n"
+        alive_s += f"💬 вσт ƒσяωαя∂ѕ : {_parse_arg(Config.BOT_FORWARDS)}\n"
+        alive_s += f"🛡 ρм gυαя∂
+ : {_parse_arg(not Config.ALLOW_ALL_PMS)}\n"
+        alive_s += f"📝 ρм ℓσggєя
+ : {_parse_arg(Config.PM_LOGGING)}"
         if allow:
             end = datetime.now()
             m_s = (end - start).microseconds / 1000
@@ -124,7 +127,7 @@ if userge.has_bot:
 
 
 def _parse_arg(arg: bool) -> str:
-    return " ✅ 𝙴𝚗𝚊𝚋𝚕𝚎𝚍" if arg else " ❌ 𝙳𝚒𝚜𝚊𝚋𝚕𝚎𝚍"
+    return " ✅ αктιƒ" if arg else " ❌ ησηαктιƒ"
 
 
 class Bot_Alive:
@@ -154,11 +157,11 @@ class Bot_Alive:
     @staticmethod
     def alive_info():
         alive_info = f"""
-<a href="https://telegram.dog/x_xtests"><b>USERGE-X</a> is Up and Running.</b>
+<a href="https://telegram.dog/mixiologist"><b>UsergayKampang</a> SIAP MENUMBUK ASU 🔥.</b>
 
-  🐍   <b>Python :</b>    <code>v{versions.__python_version__}</code>
-  🔥   <b>Pyrogram :</b>    <code>v{versions.__pyro_version__}</code>
-  🧬   <b>𝑿 :</b>    <code>v{get_version()}</code>
+  🐍  • <b>Python :</b>    <code>v{versions.__python_version__}</code>
+  🔥  • <b>Pyrogram :</b>    <code>v{versions.__pyro_version__}</code>
+  🧬  • <b>𝓚𝓸𝓪𝓵𝓪 🐨 ⁪⁬⁮⁮⁮⁮ :</b>    <code>v{get_version()}</code>
 
 <b>{Bot_Alive._get_mode()}</b>    <code>|</code>    🕔  <b>{userge.uptime}</b>
 """
@@ -167,7 +170,7 @@ class Bot_Alive:
     @staticmethod
     def _get_mode() -> str:
         if RawClient.DUAL_MODE:
-            return "↕️  DUAL"
+            return "🚀  DUAL"
         if Config.BOT_TOKEN:
             return "🤖  BOT"
         return "👤  USER"
@@ -176,8 +179,8 @@ class Bot_Alive:
     def alive_buttons():
         buttons = [
             [
-                InlineKeyboardButton(text="🔧  SETTINGS", callback_data="settings_btn"),
-                InlineKeyboardButton(text="⚡  REPO", url=Config.UPSTREAM_REPO),
+                InlineKeyboardButton(text="🌐  INFO", callback_data="settings_btn"),
+                InlineKeyboardButton(text="🐨  REPO", url=Config.UPSTREAM_REPO),
             ]
         ]
         return InlineKeyboardMarkup(buttons)
@@ -185,10 +188,10 @@ class Bot_Alive:
     @staticmethod
     def alive_default_imgs():
         alive_imgs = [
-            "https://telegra.ph/file/11123ef7dff2f1e19e79d.jpg",
-            "https://i.imgur.com/uzKdTXG.jpg",
-            "https://telegra.ph/file/6ecab390e4974c74c3764.png",
-            "https://telegra.ph/file/995c75983a6c0e4499b55.png",
-            "https://telegra.ph/file/86cc25c78ad667ca5e691.png",
+            "https://telegra.ph/file/a5f7caf7a0ab68bb6aaa8.jpg",
+            "https://telegra.ph/file/661db62b099144e5991c5.jpg",
+            
+            
+            
         ]
         return rand_array(alive_imgs)

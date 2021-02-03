@@ -106,18 +106,18 @@ class Config:
 
 
 def get_version() -> str:
-    """ get USERGE-X version """
+    """ get KampangUsergay version """
     ver = f"{versions.__major__}.{versions.__minor__}.{versions.__micro__}"
     try:
-        if "/code-rgb/userge-x" in Config.UPSTREAM_REPO.lower():
+        if "/camel07/kampangusergay" in Config.UPSTREAM_REPO.lower():
             diff = list(_REPO.iter_commits(f'v{ver}..HEAD'))
             if diff:
                 return f"{ver}-ROGUE.{len(diff)}"
         else:
             diff = list(_REPO.iter_commits(f'{Config.UPSTREAM_REMOTE}/alpha..HEAD'))
             if diff:
-                return f"{ver}-fork-[X].{len(diff)}"
+                return f"{ver}-GAY-[Chpt].{len(diff)}"
     except Exception as e:
         _LOG.error(e)
-        return "For Fix See -> https://github.com/code-rgb/USERGE-X/issues/17"
+        return "For Fix See -> https://github.com/Camel07/KampangUsergay/issues/17"
     return ver

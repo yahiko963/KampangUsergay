@@ -13,7 +13,7 @@ CHANNEL = userge.getCLogger(__name__)
 @userge.on_cmd(
     "update",
     about={
-        "header": "Check Updates or Update UsergayKampang",
+        "header": "Check Updates or Update USERGE-X",
         "flags": {
             "-pull": "pull updates",
             "-push": "push updates to heroku",
@@ -30,7 +30,7 @@ CHANNEL = userge.getCLogger(__name__)
 )
 async def check_update(message: Message):
     """ check or do updates """
-    await message.edit("``ada updatean ga yaaach 🐨...`")
+    await message.edit("`Checking for updates, please wait....`")
     flags = list(message.flags)
     pull_from_repo = False
     push_to_heroku = False
@@ -59,13 +59,13 @@ async def check_update(message: Message):
     if not (pull_from_repo or push_to_heroku):
         if out:
             change_log = (
-                f"**Ada update baru nich [{branch}]:\n\n📄 CHANGELOG 📄**\n\n"
+                f"**New UPDATE available for [{branch}]:\n\n📄 CHANGELOG 📄**\n\n"
             )
             await message.edit_or_send_as_file(
                 change_log + out, disable_web_page_preview=True
             )
         else:
-            await message.edit(f"**KampangUsergay is up-to-date with [{branch}]**", del_in=5)
+            await message.edit(f"**USERGE-X is up-to-date with [{branch}]**", del_in=5)
         return
     if pull_from_repo:
         if out:
@@ -76,7 +76,7 @@ async def check_update(message: Message):
             )
             if not push_to_heroku:
                 await message.edit(
-                    "**KampangUsergay Successfully Updated!**\n"
+                    "**USERGE-X Successfully Updated!**\n"
                     "`Now restarting... Wait for a while!`",
                     del_in=3,
                 )
@@ -105,7 +105,7 @@ def _get_updates(repo: Repo, branch: str) -> str:
     out = ""
     upst = Config.UPSTREAM_REPO.rstrip("/")
     for i in repo.iter_commits(f"HEAD..{Config.UPSTREAM_REMOTE}/{branch}"):
-        out += f"🔨 **#{i.count()}** : [{i.summary}]({upst}/commit/{i}) 🐨 __{i.author}__\n\n"
+        out += f"🔨 **#{i.count()}** : [{i.summary}]({upst}/commit/{i}) 👷 __{i.author}__\n\n"
     return out
 
 
@@ -118,10 +118,10 @@ async def _pull_from_repo(repo: Repo, branch: str) -> None:
 
 async def _push_to_heroku(msg: Message, repo: Repo, branch: str) -> None:
     sent = await msg.edit(
-        f'`Sedang mengupdate sekarang [{branch}] ke heroku...\n'
-        'tunggu 5 min dumu yaa asuu`\n\n'
-        f'* **Restart** sabar kontolllll `{Config.CMD_TRIGGER}restart -h`\n\n'
-        '* tunggu setelah KampangUsergay Sukses ter update, lalu cek update kembali :)"
+        f"`Now pushing updates from [{branch}] to heroku...\n"
+        "this will take upto 5 min`\n\n"
+        f"* **Restart** after 5 min using `{Config.CMD_TRIGGER}restart -h`\n\n"
+        "* After restarted successfully, check updates again :)"
     )
     try:
         await _heroku_helper(sent, repo, branch)

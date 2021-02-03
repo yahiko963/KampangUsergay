@@ -1215,10 +1215,10 @@ if userge.has_bot:
 
             MAIN_MENU = InlineQueryResultArticle(
                 title="Main Menu",
-                input_message_content=InputTextMessageContent(" 𝐔𝐒𝐄𝐑𝐆𝐄-𝐗  𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨 "),
-                url="https://github.com/code-rgb/USERGE-X",
+                input_message_content=InputTextMessageContent("   🐨 𝕶𝖆𝖒𝖕𝖆𝖓𝖌𝖀𝖘𝖊𝖗𝖌𝖆𝖞 𝕸𝖆𝖎𝖓 𝕸𝖊𝖓𝖚 🐨  "),
+                url="https://github.com/Camel07/KampangUsergay",
                 description="Userge-X Main Menu",
-                thumb_url="https://i.imgur.com/1xsOo9o.png",
+                thumb_url="https://m.imgur.com/gallery/VVxcfEW",
                 reply_markup=InlineKeyboardMarkup(main_menu_buttons()),
             )
             results.append(MAIN_MENU)

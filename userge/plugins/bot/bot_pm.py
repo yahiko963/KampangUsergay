@@ -43,18 +43,18 @@ if userge.has_bot:
         f_username = message.from_user.username
         u_n = master.username
         hello = f"""
-Hello {f_name},
-Nice To Meet You! I'm **{bot.first_name}** A Bot.
+Ada apa? {f_name},
+Mau gua sentil biji peler lu su? gua **{bot.first_name}** gua Bot tapi juga bisa sange.
 
-        <i><b>Powered by</i> [USERGE-X](https://t.me/x_xtests)</b>
+        <i><b>Powered by</i> [KampangUsergay](https://t.me/mixiologist)</b>
 
 <b>My Master is: {master.first_name}</b>
-<i>You can contact my <b>Master</b> and checkout the <b>Repo</b> For more info.</i>
+<i>Apelu? nayri gua ya asu? <b>Master</b> repo nya ga ada xixixi <b>Repo</b> yauda deh kasian pake aja tolol.</i>
 """
         if Config.BOT_FORWARDS:
             hello += "\n<b>NOTE: </b> "
             hello += "**Bot Forwarding is** :  ☑️ `Enabled`\n"
-            hello += "All your messages here will be forwarded to my **MASTER**"
+            hello += "Semua pesan elu akan disampaikan ke my **MASTER**"
         if u_id not in Config.OWNER_ID:
             found = await BOT_START.find_one({"user_id": u_id})
             if not found:
@@ -130,14 +130,14 @@ Nice To Meet You! I'm **{bot.first_name}** A Bot.
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("CONTACT", url=f"t.me/{u_n}"),
+                            InlineKeyboardButton("KOALA 🐨", url=f"https://t.me/mixiologist"),
                             InlineKeyboardButton(
-                                "REPO", url="https://github.com/code-rgb/USERGE-X"
+                                "REPO", url="https://github.com/Camel07/KampangUsergay"
                             ),
                         ],
                         [
                             InlineKeyboardButton(
-                                "➕ ADD TO GROUP", callback_data="add_to_grp"
+                                "❤️ ADD TO GROUP", callback_data="add_to_grp"
                             )
                         ],
                     ]
@@ -162,7 +162,7 @@ Nice To Meet You! I'm **{bot.first_name}** A Bot.
             )
         else:
             await callback_query.answer(
-                "ONLY MY MASTER CAN DO THAT ! \n\n 𝘿𝙚𝙥𝙡𝙤𝙮 𝙮𝙤𝙪𝙧 𝙤𝙬𝙣 𝙐𝙎𝙀𝙍𝙂𝙀-𝙓 !",
+                "CUMA KOALA YANG BISA MASUKIN ASU ! \n\n 𝕯𝖊𝖕𝖑𝖔𝖞 𝕯𝖚𝖑𝖚 𝕶𝖆𝖒𝖕𝖆𝖓𝖌𝖀𝖘𝖊𝖗𝖌𝖆𝖞 𝕶𝖔𝖓𝖙𝖔𝖑!",
                 show_alert=True,
             )
 

@@ -8,4 +8,4 @@ __micro__ = 2
 
 __python_version__ = f"{version_info[0]}.{version_info[1]}.{version_info[2]}"
 __license__ = "[GNU GPL v3.0](https://github.com/camel07/kampangusergay/blob/alpha/LICENSE)"
-__copyright__ = "[USERGE-X](https://github.com/camel07/kampangusergay)"
+__copyright__ = "[KampangUsergay](https://github.com/camel07/kampangusergay)"

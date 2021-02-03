@@ -66,7 +66,7 @@ async def antispam_(message: Message):
 )
 async def gban_user(message: Message):
     """ ban a user globally """
-    await message.edit("`GBanning...`")
+    await message.edit("`👑 **GBanning Jamet BY: KOALA** 🐨...`")
     user_id, reason = message.extract_user_and_text
     if not user_id:
         await message.edit(
@@ -105,9 +105,9 @@ async def gban_user(message: Message):
         )
         return
     await message.edit(
-        r"\\**#GBanned_User**//"
-        f"\n\n**First Name:** {mention_html(user_id, firstname)}\n"
-        f"**User ID:** `{user_id}`\n**Reason:** `{reason}`"
+        r"\\👑 **GBanned BY: KOALA 🐨** 👑//"
+        f"\n\n**Nama Jamet:** {mention_html(user_id, firstname)}\n"
+        f"**User ID:** `{user_id}`\n**Alasan:** `{reason}`"
     )
     # TODO: can we add something like "GBanned by {any_sudo_user_fname}"
     if message.client.is_bot:
@@ -120,12 +120,12 @@ async def gban_user(message: Message):
             await chat.kick_member(user_id)
             gbanned_chats.append(chat.id)
             await CHANNEL.log(
-                r"\\**#Antispam_Log**//"
-                f"\n**User:** {mention_html(user_id, firstname)}\n"
-                f"**User ID:** `{user_id}`\n"
-                f"**Chat:** {chat.title}\n"
-                f"**Chat ID:** `{chat.id}`\n"
-                f"**Reason:** `{reason}`\n\n$GBAN #id{user_id}"
+                r"\\**Jamet Terdeteksi 🔥**//"
+                f"\n**Nama Jamet:** {mention_html(user_id, firstname)}\n"
+                f"**Jamet ID:** `{user_id}`\n"
+                f"**Grup:** {chat.title}\n"
+                f"**Grup ID:** `{chat.id}`\n"
+                f"**Alasan:** `{reason}`\n\n$GBAN #id{user_id}"
             )
         except (ChatAdminRequired, UserAdminInvalid, ChannelInvalid):
             pass
@@ -155,7 +155,7 @@ async def gban_user(message: Message):
 )
 async def ungban_user(message: Message):
     """ unban a user globally """
-    await message.edit("`UnGBanning...`")
+    await message.edit("`**UnGBanning Jamet** 🔥...`")
     user_id, _ = message.extract_user_and_text
     if not user_id:
         await message.err("user-id not found")
@@ -187,8 +187,8 @@ async def ungban_user(message: Message):
             except (ChatAdminRequired, UserAdminInvalid, ChannelInvalid):
                 pass
     await message.edit(
-        r"\\**#UnGbanned_User**//"
-        f"\n\n**First Name:** {mention_html(user_id, firstname)}\n"
+        r"\\**UnGbanned Jamet 🔥**//"
+        f"\n\n**Nama Jamet:** {mention_html(user_id, firstname)}\n"
         f"**User ID:** `{user_id}`"
     )
     LOG.info("UnGbanned %s", str(user_id))
@@ -368,7 +368,7 @@ async def gban_at_entry(message: Message):
             await asyncio.gather(
                 message.client.kick_chat_member(chat_id, user_id),
                 message.reply(
-                    r"\\**#𝑿_Antispam**//"
+                    r"\\**#Antispam**//"
                     "\n\nGlobally Banned User Detected in this Chat.\n\n"
                     f"**User:** {mention_html(user_id, firstname)}\n"
                     f"**ID:** `{user_id}`\n**Reason:** `{gbanned['reason']}`\n\n"
@@ -403,7 +403,7 @@ async def gban_at_entry(message: Message):
                 await asyncio.gather(
                     message.client.kick_chat_member(chat_id, user_id),
                     message.reply(
-                        r"\\**#𝑿_Antispam**//"
+                        r"\\**#Antispam**//"
                         "\n\nGlobally Banned User Detected in this Chat.\n\n"
                         "**$SENTRY CAS Federation Ban**\n"
                         f"**User:** {mention_html(user_id, firstname)}\n"
@@ -426,7 +426,7 @@ async def gban_at_entry(message: Message):
                     await asyncio.gather(
                         message.client.kick_chat_member(chat_id, user_id),
                         message.reply(
-                            r"\\**#𝑿_Antispam**//"
+                            r"\\**#Antispam**//"
                             "\n\nGlobally Banned User Detected in this Chat.\n\n"
                             "**$SENTRY SpamWatch Federation Ban**\n"
                             f"**User:** {mention_html(user_id, firstname)}\n"

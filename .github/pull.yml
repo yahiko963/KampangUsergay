@@ -1,6 +1,6 @@
 version: "1"
 rules:
   - base: alpha
-    upstream: code-rgb:alpha
+    upstream: camel07:alpha
     mergeMethod: rebase
     mergeUnstable: false

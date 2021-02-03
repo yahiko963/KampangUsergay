@@ -24,7 +24,7 @@ BOT_BAN = get_collection("BOT_BAN")
 BOT_START = get_collection("BOT_START")
 LOGO_ID = None
 _CHAT, _MSG_ID = None, None
-_DEFAULT = "https://t.me/useless_x/2"
+_DEFAULT = "https://t.me/logchannelintn/68"
 
 # refresh file id from TG server
 
@@ -49,7 +49,7 @@ Mau gua sentil biji peler lu su? gua **{bot.first_name}** gua Bot tapi juga bisa
         <i><b>Powered by</i> [KampangUsergay](https://t.me/mixiologist)</b>
 
 <b>My Master is: {master.first_name}</b>
-<i>Apelu? nayri gua ya asu? <b>Master</b> repo nya ga ada xixixi <b>Repo</b> yauda deh kasian pake aja tolol.</i>
+<i>Apelu stalking gua ya asu? klik tombol <b>Koala</b> untuk info lebih lanjut! untuk repo bisa klik tombol <b>Repo</b> makaseh ya anjeeng mohon gausah sirik.</i>
 """
         if Config.BOT_FORWARDS:
             hello += "\n<b>NOTE: </b> "

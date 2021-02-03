@@ -170,12 +170,12 @@ _checkUnoffPlugins() {
         editLastMessage "\t\tUpgrading PIP ..."
         upgradePip
         editLastMessage "\t\tInstalling Requirements ..."
-        installReq Usergay-Plugins
+        installReq Userge-Plugins
         editLastMessage "\t\tCleaning ..."
         rm -rf userge/plugins/unofficial/
-        mv Usergay-Plugins/plugins/ usergay/plugins/unofficial/
-        cp -r Usergay-Plugins/resources/* resources/
-        rm -rf Usergay-Plugins/
+        mv Userge-Plugins/plugins/ userge/plugins/unofficial/
+        cp -r Userge-Plugins/resources/* resources/
+        rm -rf Userge-Plugins/
         deleteLastMessage
         editLastMessage "\tKampangUsergay [Extra] Plugins Loaded Successfully !"
     else

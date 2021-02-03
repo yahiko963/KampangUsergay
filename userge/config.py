@@ -112,11 +112,11 @@ def get_version() -> str:
         if "/camel07/kampangusergay" in Config.UPSTREAM_REPO.lower():
             diff = list(_REPO.iter_commits(f'v{ver}..HEAD'))
             if diff:
-                return f"{ver}-ROGUE.{len(diff)}"
+                return f"{ver}-Chpt.{len(diff)}"
         else:
             diff = list(_REPO.iter_commits(f'{Config.UPSTREAM_REMOTE}/alpha..HEAD'))
             if diff:
-                return f"{ver}-GAY-[Chpt].{len(diff)}"
+                return f"{ver}-GAY.{len(diff)}"
     except Exception as e:
         _LOG.error(e)
         return "For Fix See -> https://github.com/Camel07/KampangUsergay/issues/17"

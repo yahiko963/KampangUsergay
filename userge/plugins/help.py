@@ -59,7 +59,7 @@ _CATEGORY = {
 SAVED_SETTINGS = get_collection("CONFIGS")
 REPO_X = InlineQueryResultArticle(
     title="Repo",
-    input_message_content=InputTextMessageContent("**Here's how to setup USERGE-X** "),
+    input_message_content=InputTextMessageContent("**Here's how to setup KampangUsergay** "),
     url="https://github.com/Camel07/KampangUsergay",
     description="Setup Your Own",
     thumb_url="https://m.imgur.com/gallery/VVxcfEW",
@@ -1217,8 +1217,8 @@ if userge.has_bot:
                 title="Main Menu",
                 input_message_content=InputTextMessageContent("   🐨 𝕶𝖆𝖒𝖕𝖆𝖓𝖌𝖀𝖘𝖊𝖗𝖌𝖆𝖞 𝕸𝖆𝖎𝖓 𝕸𝖊𝖓𝖚 🐨  "),
                 url="https://github.com/Camel07/KampangUsergay",
-                description="Userge-X Main Menu",
-                thumb_url="https://m.imgur.com/gallery/VVxcfEW",
+                description="KampangUsergay Main Menu",
+                thumb_url="https://m.imgur.com/gallery/VVxcfEW.png",
                 reply_markup=InlineKeyboardMarkup(main_menu_buttons()),
             )
             results.append(MAIN_MENU)

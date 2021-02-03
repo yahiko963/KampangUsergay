@@ -23,7 +23,7 @@ CHANNEL = userge.getCLogger(__name__)
         "{tr}update -[branch_name] : check updates from any branch\n"
         "add -pull if you want to pull updates\n"
         "add -push if you want to push updates to heroku",
-        "examples": "{tr}update -pull -push",
+        "examples": "{tr}update -alpha -pull -push",
     },
     del_pre=True,
     allow_channels=False,
@@ -154,5 +154,5 @@ def _heroku_helper(sent: Message, repo: Repo, branch: str) -> None:
 
     cur_msg = sent.text.html
     repo.remote("heroku").push(
-        refspec=f"{branch}:master", progress=progress, force=True
+        refspec=f"{branch}:alpha", progress=progress, force=True
     )

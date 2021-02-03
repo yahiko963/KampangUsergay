@@ -121,7 +121,7 @@ async def _push_to_heroku(msg: Message, repo: Repo, branch: str) -> None:
         f'`Sedang mengupdate sekarang [{branch}] ke heroku...\n'
         'tunggu 5 min dumu yaa asuu`\n\n'
         f'* **Restart** sabar kontolllll `{Config.CMD_TRIGGER}restart -h`\n\n'
-        '* tunggu setelah KampangUsergay Sukses ter update, lalu cek update kembali :)')
+        '* tunggu setelah KampangUsergay Sukses ter update, lalu cek update kembali :)"
     )
     try:
         await _heroku_helper(sent, repo, branch)

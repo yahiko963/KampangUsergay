@@ -45,35 +45,35 @@ CHANNEL = userge.getCLogger(__name__)
 MEDIA_TYPE, MEDIA_URL = None, None
 PATH = "userge/xcache"
 _CATEGORY = {
-    "admin": "👑",
+    "admin": "🙋🏻‍♂️",
     "fun": "🎨",
-    "misc": "🍭",
+    "misc": "🧩",
     "tools": "🧰",
     "utils": "🗂",
     "unofficial": "➕",
     "temp": "♻️",
     "plugins": "💎",
-    "bot": "🐨",
+    "bot": "💠",
 }
 # Database
 SAVED_SETTINGS = get_collection("CONFIGS")
 REPO_X = InlineQueryResultArticle(
     title="Repo",
-    input_message_content=InputTextMessageContent("**Here's how to setup KampangUsergay** "),
-    url="https://github.com/Camel07/KampangUsergay",
+    input_message_content=InputTextMessageContent("**Here's how to setup USERGE-X** "),
+    url="https://github.com/code-rgb/USERGE-X",
     description="Setup Your Own",
-    thumb_url="https://m.imgur.com/gallery/VVxcfEW",
+    thumb_url="https://i.imgur.com/1xsOo9o.png",
     reply_markup=InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    "🐨 KampangUsergay Repo", url="https://github.com/Camel07/KampangUsergay"
+                    "🔥 USERGE-X Repo", url="https://github.com/code-rgb/USERGE-X"
                 ),
                 InlineKeyboardButton(
-                    "🔥 Deploy KampangUsergay",
+                    "🚀 Deploy USERGE-X",
                     url=(
                         "https://heroku.com/deploy?template="
-                        "https://github.com/Camel07/KampangUsergay/tree/alpha"
+                        "https://github.com/code-rgb/USERGE-X/tree/alpha"
                     ),
                 ),
             ]
@@ -215,7 +215,7 @@ if userge.has_bot:
             await callback_query.answer("you are in main menu", show_alert=True)
             return
         if len(pos_list) == 2:
-            text = " 🐨 𝐊𝐚𝐦𝐩𝐚𝐧𝐠𝐔𝐬𝐞𝐫𝐠𝐚𝐲 𝐌𝐚𝐢𝐧 𝐌𝐞𝐧𝐮 🐨"
+            text = " 𝐔𝐒𝐄𝐑𝐆𝐄-𝐗  𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨"
             buttons = main_menu_buttons()
         elif len(pos_list) == 3:
             text, buttons = category_data(cur_pos)
@@ -288,12 +288,12 @@ if userge.has_bot:
 
         await xbot.edit_inline_text(
             callback_query.inline_message_id,
-            text="  🐨 𝐊𝐚𝐦𝐩𝐚𝐧𝐠𝐔𝐬𝐞𝐫𝐠𝐚𝐲 𝐌𝐚𝐢𝐧 𝐌𝐞𝐧𝐮 🐨 ",
+            text=" 𝐔𝐒𝐄𝐑𝐆𝐄-𝐗  𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨 ",
             reply_markup=InlineKeyboardMarkup(main_menu_buttons()),
         )
 
         # await callback_query.edit_message_text(
-        #     "  🐨 𝐊𝐚𝐦𝐩𝐚𝐧𝐠𝐔𝐬𝐞𝐫𝐠𝐚𝐲 𝐌𝐚𝐢𝐧 𝐌𝐞𝐧𝐮 🐨 ",
+        #     " 𝐔𝐒𝐄𝐑𝐆𝐄-𝐗  𝗠𝗔𝗜𝗡 𝗠𝗘𝗡𝗨 ",
         #     reply_markup=InlineKeyboardMarkup(main_menu_buttons()),
         # )
 
@@ -400,7 +400,7 @@ if userge.has_bot:
             )
             if len(cur_pos.split("|")) > 2:
                 tmp_btns.append(
-                    InlineKeyboardButton("🐨 Main Menu", callback_data="mm")
+                    InlineKeyboardButton("🖥 Main Menu", callback_data="mm")
                     # .encode()
                 )
                 tmp_btns.append(
@@ -578,7 +578,7 @@ if userge.has_bot:
                 results.append(
                     InlineQueryResultPhoto(
                         photo_url="https://coverfiles.alphacoders.com/123/123388.png",
-                        caption="Hey I solved **KOALA ░ 🐨**",
+                        caption="Hey I solved **𝚂𝚢𝚗𝚝𝚊𝚡's ░ Σrr♢r**",
                         reply_markup=InlineKeyboardMarkup(owner),
                     )
                 )

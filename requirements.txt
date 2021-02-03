@@ -33,6 +33,7 @@ setuptools>=40.3.0
 spamwatch
 speedtest-cli
 stagger
+ujson>=4.0.1
 telegraph
 tgcrypto
 urbandict==0.5

@@ -51,7 +51,7 @@ _checkDefaultVars() {
         [PREFERRED_LANGUAGE]="en"
         [DOWN_PATH]="downloads"
         [UPSTREAM_REMOTE]="upstream"
-        [UPSTREAM_REPO]="https://github.com/Camel07/KampangUsergay"
+        [UPSTREAM_REPO]="https://github.com/code-rgb/USERGE-X"
         [LOAD_UNOFFICIAL_PLUGINS]=true
         [G_DRIVE_IS_TD]=true
         [CMD_TRIGGER]="."
@@ -162,11 +162,11 @@ _checkUpstreamRepo() {
 }
 
 _checkUnoffPlugins() {
-    editLastMessage "Checking KampangUsergay [Extra] Plugins ..."
+    editLastMessage "Checking USERGE-X [Extra] Plugins ..."
     if test $LOAD_UNOFFICIAL_PLUGINS = true; then
-        editLastMessage "\tLoading KampangUsergay [Extra] Plugins ..."
+        editLastMessage "\tLoading USERGE-X [Extra] Plugins ..."
         replyLastMessage "\t\tClonning ..."
-        gitClone --depth=1 https://github.com/Camel07/Usergay-Plugins.git
+        gitClone --depth=1 https://github.com/code-rgb/Userge-Plugins.git
         editLastMessage "\t\tUpgrading PIP ..."
         upgradePip
         editLastMessage "\t\tInstalling Requirements ..."
@@ -177,9 +177,9 @@ _checkUnoffPlugins() {
         cp -r Userge-Plugins/resources/* resources/
         rm -rf Userge-Plugins/
         deleteLastMessage
-        editLastMessage "\tKampangUsergay [Extra] Plugins Loaded Successfully !"
+        editLastMessage "\tUSERGE-X [Extra] Plugins Loaded Successfully !"
     else
-        editLastMessage "\tKampangUsergay [Extra] Plugins Disabled !"
+        editLastMessage "\tUSERGE-X [Extra] Plugins Disabled !"
     fi
     deleteLastMessage
 }

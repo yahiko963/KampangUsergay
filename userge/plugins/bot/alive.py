@@ -158,7 +158,7 @@ class Bot_Alive:
 \n╭▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅╮
   🐍  • <b>Python :</b>    <code>v{versions.__python_version__}</code>
   🔥  • <b>Pyrogram :</b>    <code>v{versions.__pyro_version__}</code>
-  🧬  • <b>𝓚𝓸𝓪𝓵𝓪 🐨 ⁪⁬⁮⁮⁮⁮ :</b>    <code>v{get_version()}</code>
+  🧬  • <b>𝓚𝓸𝓪𝓵𝓪 🐨 ⁪⁬⁮⁮⁮⁮ :</b>    <a href="https://telegram.dog/mixiologist"><b>UsergayKampang</a>
 ╰▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅╯\n
 <b>{Bot_Alive._get_mode()}</b>    <code>|</code>    🕔  <b>{userge.uptime}</b>
 """
@@ -187,7 +187,7 @@ class Bot_Alive:
         alive_imgs = [
             "https://telegra.ph/file/a5f7caf7a0ab68bb6aaa8.jpg",
             "https://telegra.ph/file/661db62b099144e5991c5.jpg",
-            
+            "https://telegra.ph/file/29080b25f0a44033ead7e.mp4",
             
             
         ]

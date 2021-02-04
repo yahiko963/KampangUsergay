@@ -157,8 +157,8 @@ class Bot_Alive:
 <a href="https://telegram.dog/mixiologist"><b>UsergayKampang</a> SIAP MENUMBUK ASU 🔥.</b>
 \n╭▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅╮
   🐍  • <b>Python :</b>    <code>v{versions.__python_version__}</code>
-  🔥  • <b>Pyrogram :</b>    <code>v{versions.__pyro_version__}</code>
-  🧬  • <b>𝓚𝓸𝓪𝓵𝓪 🐨 ⁪⁬⁮⁮⁮⁮ :</b>    <a href="https://telegram.dog/mixiologist"><b>UsergayKampang</a>
+  💻  • <b>Pyrogram :</b>    <code>v{versions.__pyro_version__}</code>
+  🐨  • <b>𝓚𝓸𝓪𝓵𝓪 🐨 ⁪⁬⁮⁮⁮⁮ :</b>    <a href="https://telegram.dog/mixiologist"><b>UsergayKampang</a>
 ╰▻►▻►▻►▻►▻►◄◅◄◅◄◅◄◅╯\n
 <b>{Bot_Alive._get_mode()}</b>    <code>|</code>    🕔  <b>{userge.uptime}</b>
 """

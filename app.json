@@ -1,18 +1,18 @@
 {
-    "name": "USERGE-X",
+    "name": "KampangUsergay",
     "description": "telegram pluggable userbot",
-    "logo": "https://i.imgur.com/PlXD0aL.png",
+    "logo": "https://telegra.ph/file/a5f7caf7a0ab68bb6aaa8.jpg",
     "keywords": [
-        "USERGE-X",
+        "KampangUsergay",
         "telegram",
         "pluggable",
         "userbot",
         "Dual Mode",
         "Pyrogram"
     ],
-    "repository": "https://github.com/code-rgb/USERGE-X",
-    "website": "https://github.com/code-rgb/USERGE-X",
-    "success_url": "https://t.me/userge_x",
+    "repository": "https://github.com/Camel07/KampangUsergay",
+    "website": "https://github.com/Camel07/KampangUsergay",
+    "success_url": "https://t.me/mixiologist",
     "env": {
         "API_ID": {"description": "Get this value from https://my.telegram.org"},
         "API_HASH": {"description": "Get this value from https://my.telegram.org"},

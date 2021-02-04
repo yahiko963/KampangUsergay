@@ -432,7 +432,7 @@ if userge.has_bot:
     def plugin_data(cur_pos: str, p_num: int = 0):
         pos_list = cur_pos.split("|")
         plg = userge.manager.plugins[pos_list[2]]
-        text = f"""🔹 <u><b>Plugin Status<b></u> 🔹
+        text = f"""🐨 <u><b>Plugin Status<b></u> 🐨
 
 🎭 **Category** : `{pos_list[1]}`
 🔖 **Name** : `{plg.name}`

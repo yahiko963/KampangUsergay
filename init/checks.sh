@@ -166,7 +166,7 @@ _checkUnoffPlugins() {
     if test $LOAD_UNOFFICIAL_PLUGINS = true; then
         editLastMessage "\tLoading KampangUsergay [Extra] Plugins ..."
         replyLastMessage "\t\tClonning ..."
-        gitClone --depth=1 https://github.com/code-rgb/Userge-Plugins.git
+        gitClone --depth=1 https://github.com/Camel07/Userge-Plugins.git
         editLastMessage "\t\tUpgrading PIP ..."
         upgradePip
         editLastMessage "\t\tInstalling Requirements ..."

@@ -1,7 +1,7 @@
 <h2 align="center"><b>MENAGE: <a href="https://telegram.dog/mixiologist">KOALA ░ 🐨</a></b></h2>
 <br>
 <p align="center">
-   <a href="https://github.com/Camel07/KampangUsergay"><img src="https://media0.giphy.com/media/Hs0cX9Z3RR77c0MMA7/giphy.gif" alt="KampangUsergay" width=400px></a>
+   <a href="https://github.com/ManusiaRakitan/KampangUsergay"><img src="https://media0.giphy.com/media/Hs0cX9Z3RR77c0MMA7/giphy.gif" alt="KampangUsergay" width=400px></a>
    <br>
    <br>
 </p>
@@ -43,7 +43,7 @@
 ## How To Deploy 
 * With Heroku:
 <p align="center">
-   <a href = "https://heroku.com/deploy?template=https://github.com/Camel07/UsergayKampang/tree/alpha"><img src="https://telegra.ph/file/34fa325c222a70badb02f.jpg" alt="Press to Takeoff" width="490px"></a>
+   <a href = "https://heroku.com/deploy?template=https://github.com/ManusiaRakitan/UsergayKampang/tree/alpha"><img src="https://telegra.ph/file/34fa325c222a70badb02f.jpg" alt="Press to Takeoff" width="490px"></a>
 </p>
 <br>
 
@@ -51,7 +51,7 @@
 * First click The Button Above.
 * Fill `API_ID`, `API_HASH`, `DATABASE_URL`, `LOG_CHANNEL_ID`, `HEROKU_APP_NAME` and `HEROKU_API_KEY` (**required**)
 * Then fill Dual Mode vars : `OWNER_ID`, `BOT_TOKEN` and `HU_STRING_SESSION`
-* Then fill [other **non-required** vars](https://telegra.ph/Heroku-Vars-for-USERGE-X-08-25) later
+* Then fill [other **non-required** vars](https://telegra.ph/ᴋᴏᴀʟᴀ-02-06) later
 * Finally **hit deploy** button
 ## String Session
 **VAR ->** `HU_STRING_SESSION`
@@ -66,12 +66,12 @@
 ## Other Ways
 
 * With Docker 🐳 
-    <a href="https://github.com/Camel07/UsergayKampang/blob/alpha/resources/readmeDocker.md"><b>See Detailed Guide</b></a>
+    <a href="https://github.com/ManusiaRakitan/UsergayKampang/blob/alpha/resources/readmeDocker.md"><b>See Detailed Guide</b></a>
 
 * With Git, Python and pip 🔧
   ```bash
   # clone the repo
-  git clone https://github.com/camel07/usergaykampang.git
+  git clone https://github.com/manusiarakitan/usergaykampang.git
   cd userge-x
 
   # create virtualenv

@@ -10,8 +10,8 @@
         "Dual Mode",
         "Pyrogram"
     ],
-    "repository": "https://github.com/Camel07/KampangUsergay",
-    "website": "https://github.com/Camel07/KampangUsergay",
+    "repository": "https://github.com/ManusiaRakitan/KampangUsergay",
+    "website": "https://github.com/ManusiaRakitan/KampangUsergay",
     "success_url": "https://t.me/mixiologist",
     "env": {
         "API_ID": {"description": "Get this value from https://my.telegram.org"},

@@ -32,6 +32,6 @@ jobs:
           commit_message: 'black autoformat'
           commit_options: '--no-verify'
           repository: .
-          commit_user_name: code-rgb
-          commit_user_email: 62891774+code-rgb@users.noreply.github.com
-          commit_author: code-rgb <62891774+code-rgb@users.noreply.github.com>
+          commit_user_name: manusiarakitan
+          commit_user_email: zauharcamel@gmail.com
+          commit_author: manusiarakitan <zauharcamel@gmail.com>

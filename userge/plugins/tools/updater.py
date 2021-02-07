@@ -13,7 +13,7 @@ CHANNEL = userge.getCLogger(__name__)
 @userge.on_cmd(
     "update",
     about={
-        "header": "Check Updates or Update USERGE-X",
+        "header": "Memeriksa Updates atau Update KampangUsergay",
         "flags": {
             "-pull": "pull updates",
             "-push": "push updates to heroku",
@@ -30,7 +30,7 @@ CHANNEL = userge.getCLogger(__name__)
 )
 async def check_update(message: Message):
     """ check or do updates """
-    await message.edit("`Checking for updates, please wait....`")
+    await message.edit("`Proses Memeriksa Update Terbaru , sabar yaa kontolll....`")
     flags = list(message.flags)
     pull_from_repo = False
     push_to_heroku = False
@@ -65,7 +65,7 @@ async def check_update(message: Message):
                 change_log + out, disable_web_page_preview=True
             )
         else:
-            await message.edit(f"**USERGE-X is up-to-date with [{branch}]**", del_in=5)
+            await message.edit(f"**KampangUsergay is up-to-date with [{branch}]**", del_in=5)
         return
     if pull_from_repo:
         if out:
@@ -76,7 +76,7 @@ async def check_update(message: Message):
             )
             if not push_to_heroku:
                 await message.edit(
-                    "**USERGE-X Successfully Updated!**\n"
+                    "**KampangUsergay Successfully Updated!**\n"
                     "`Now restarting... Wait for a while!`",
                     del_in=3,
                 )
@@ -105,7 +105,7 @@ def _get_updates(repo: Repo, branch: str) -> str:
     out = ""
     upst = Config.UPSTREAM_REPO.rstrip("/")
     for i in repo.iter_commits(f"HEAD..{Config.UPSTREAM_REMOTE}/{branch}"):
-        out += f"🔨 **#{i.count()}** : [{i.summary}]({upst}/commit/{i}) 👷 __{i.author}__\n\n"
+        out += f"🔨 **#{i.count()}** : [{i.summary}]({upst}/commit/{i}) 🐨 __{i.author}__\n\n"
     return out
 
 

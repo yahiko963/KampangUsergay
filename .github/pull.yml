@@ -1,6 +1,6 @@
 version: "1"
 rules:
   - base: alpha
-    upstream: code-rgb:alpha
+    upstream: manusiarakitan:alpha
     mergeMethod: rebase
     mergeUnstable: false

@@ -1,9 +1,9 @@
 """Download Anime"""
 
-# For USERGE-X
+# For UsergayKampang
 # (C) 2021 All Rights Reserved
 # Idea by: [TG: @Lostb053]
-# Author: (github.com/code-rgb) [TG: @DeletedUser420]
+# Author: (github.com/manusiarakitan) [TG: @mixiologist]
 
 
 import asyncio

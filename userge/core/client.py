@@ -52,7 +52,7 @@ class _AbstractUserge(Methods, RawClient):
 
     @property
     def uptime(self) -> str:
-        """ returns USERGE-X uptime """
+        """ returns KampangUsergay uptime """
         return time_formatter(time.time() - _START_TIME)
 
     async def finalize_load(self) -> None:
@@ -60,7 +60,7 @@ class _AbstractUserge(Methods, RawClient):
         await asyncio.gather(_complete_init_tasks(), self.manager.init())
 
     async def load_plugin(self, name: str, reload_plugin: bool = False) -> None:
-        """ Load plugin to USERGE-X """
+        """ Load plugin to KampangUsergay """
         _LOG.debug(_LOG_STR, f"Importing {name}")
         _IMPORTED.append(
             importlib.import_module(f"userge.plugins.{name}"))
@@ -105,7 +105,7 @@ class _AbstractUserge(Methods, RawClient):
 
 
 class UsergeBot(_AbstractUserge):
-    """ USERGE-X Bot """
+    """ KampangUsergay Bot """
     def __init__(self, **kwargs) -> None:
         _LOG.info(_LOG_STR, "Setting UsergeBot Configs")
         super().__init__(session_name=":memory:", **kwargs)
@@ -117,12 +117,12 @@ class UsergeBot(_AbstractUserge):
 
 
 class Userge(_AbstractUserge):
-    """ USERGE-X Bot """
+    """ KampangUsergay Bot """
 
     has_bot = bool(Config.BOT_TOKEN)
 
     def __init__(self, **kwargs) -> None:
-        _LOG.info(_LOG_STR, "Setting USERGE-X Configs")
+        _LOG.info(_LOG_STR, "Setting KampangUsergay Configs")
         kwargs = {
             'api_id': Config.API_ID,
             'api_hash': Config.API_HASH,
@@ -140,7 +140,7 @@ class Userge(_AbstractUserge):
 
     @property
     def bot(self) -> Union['UsergeBot', 'Userge']:
-        """ returns USERGE-X Bot """
+        """ returns KampangUsergay Bot """
         if self._bot is None:
             if Config.BOT_TOKEN:
                 return self
@@ -149,25 +149,25 @@ class Userge(_AbstractUserge):
 
     async def start(self) -> None:
         """ start client and bot """
-        _LOG.info(_LOG_STR, "Starting USERGE-X")
+        _LOG.info(_LOG_STR, "Starting KampangUsergay")
         await super().start()
         if self._bot is not None:
-            _LOG.info(_LOG_STR, "Starting -X- Bot")
+            _LOG.info(_LOG_STR, "Starting -GAY- Bot")
             await self._bot.start()
         await self._load_plugins()
 
     async def stop(self) -> None:  # pylint: disable=arguments-differ
         """ stop client and bot """
         if self._bot is not None:
-            _LOG.info(_LOG_STR, "Stopping -X- Bot")
+            _LOG.info(_LOG_STR, "Stopping -GAY- Bot")
             await self._bot.stop()
-        _LOG.info(_LOG_STR, "Stopping USERGE-X")
+        _LOG.info(_LOG_STR, "Stopping KampangUsergay")
         await super().stop()
         _close_db()
         pool._stop()  # pylint: disable=protected-access
 
     def begin(self, coro: Optional[Awaitable[Any]] = None) -> None:
-        """ start USERGE-X """
+        """ start KampangUsergay """
         lock = asyncio.Lock()
         running_tasks: List[asyncio.Task] = []
 
@@ -187,7 +187,7 @@ class Userge(_AbstractUserge):
             _LOG.info(_LOG_STR, "Loop Stopped !")
 
         async def _shutdown(sig: signal.Signals) -> None:
-            _LOG.info(_LOG_STR, f"Received Stop Signal [{sig.name}], Exiting USERGE-X ...")
+            _LOG.info(_LOG_STR, f"Received Stop Signal [{sig.name}], Exiting KampangUsergay ...")
             await _finalize()
 
         for sig in (signal.SIGHUP, signal.SIGTERM, signal.SIGINT):
@@ -196,7 +196,7 @@ class Userge(_AbstractUserge):
         self.loop.run_until_complete(self.start())
         for task in self._tasks:
             running_tasks.append(self.loop.create_task(task()))
-        logbot.edit_last_msg("USERGE-X has Started Successfully !")
+        logbot.edit_last_msg("KampangUsergay has Started Successfully !")
         logbot.end()
         mode = "[DUAL]" if RawClient.DUAL_MODE else "[BOT]" if Config.BOT_TOKEN else "[USER]"
         try:
@@ -204,7 +204,7 @@ class Userge(_AbstractUserge):
                 _LOG.info(_LOG_STR, f"Running Coroutine - {mode}")
                 self.loop.run_until_complete(coro)
             else:
-                _LOG.info(_LOG_STR, f"Idling USERGE-X - {mode}")
+                _LOG.info(_LOG_STR, f"Idling KampangUsergay - {mode}")
                 idle()
             self.loop.run_until_complete(_finalize())
         except (asyncio.exceptions.CancelledError, RuntimeError):

@@ -25,7 +25,7 @@ _LOG_STR = "<<<!  #####  %s  #####  !>>>"
 class Restart(RawClient):  # pylint: disable=missing-class-docstring
     async def restart(self, update_req: bool = False) -> None:  # pylint: disable=arguments-differ
         """ Restart the AbstractUserge """
-        _LOG.info(_LOG_STR, "Restarting USERGE-X")
+        _LOG.info(_LOG_STR, "Restarting KampangUsergay")
         await self.stop()
         try:
             c_p = psutil.Process(os.getpid())

@@ -7,12 +7,13 @@
 # All rights reserved.
 
 import asyncio
+from os import system
 from time import time
 
 from git import Repo
 from git.exc import GitCommandError
 
-from userge import userge, Message, Config, pool
+from userge import Config, Message, pool, userge
 
 LOG = userge.getLogger(__name__)
 CHANNEL = userge.getCLogger(__name__)
@@ -21,24 +22,30 @@ CHANNEL = userge.getCLogger(__name__)
 @userge.on_cmd(
     "update",
     about={
-        "header": "Check Updates or Update KampangUsergay",
+        "header": "Ada updatean ga yaacccch 🐨",
         "flags": {
             "-pull": "pull updates",
-            "-push": "push updates to heroku",
             "-branch": "Default is -alpha",
-    },
-        "usage": "{tr}update : check updates from default branch\n"
-        "{tr}update -[branch_name] : check updates from any branch\n"
-        "add -pull if you want to pull updates\n"
-        "add -push if you want to push updates to heroku",
-        "examples": "{tr}update -pull -push",
+        },
+        "usage": (
+            "{tr}update : check updates from default branch\n"
+            "{tr}update -[branch_name] : check updates from any branch\n"
+            "add -pull if you want to pull updates\n"
+        ),
+        "examples": "{tr}update -pull",
     },
     del_pre=True,
     allow_channels=False,
 )
 async def check_update(message: Message):
     """ check or do updates """
-    await message.edit("`ada updatean ga yaaach 🐨`")
+    await message.edit("`Memeriksa update terbaru KampangUsergay....`")
+    if Config.HEROKU_ENV:
+        await message.edit(
+            "**Heroku App terdeteksi !**, Hahaha mampus ke suspen lu 😂.\n"
+            "Yaaah heroku lu ke suspen , salah siapa update hahaha"
+        )
+        return
     flags = list(message.flags)
     pull_from_repo = False
     push_to_heroku = False
@@ -50,36 +57,49 @@ async def check_update(message: Message):
         if not Config.HEROKU_APP:
             await message.err("HEROKU APP : could not be found !")
             return
-        push_to_heroku = True
-        flags.remove("push")
+        # push_to_heroku = True
+        # flags.remove("push")
     if len(flags) == 1:
         branch = flags[0]
-    
-            
     repo = Repo()
     if branch not in repo.branches:
-        await message.err(f'invalid branch name : {branch}')
+        await message.err(f"invalid branch name : {branch}")
         return
     try:
         out = _get_updates(repo, branch)
     except GitCommandError as g_e:
-        await message.err(g_e, del_in=5)
-        return
+        if "128" in str(g_e):
+            system(
+                f"git fetch {Config.UPSTREAM_REMOTE} {branch} && git checkout -f {branch}"
+            )
+            out = _get_updates(repo, branch)
+        else:
+            await message.err(g_e, del_in=5)
+            return
     if not (pull_from_repo or push_to_heroku):
         if out:
-            change_log = f'**UPDATE BARU NIH ASU for [{branch}]:\n\n📄 CHANGELOG 📄**\n\n'
-            await message.edit_or_send_as_file(change_log + out, disable_web_page_preview=True)
+            change_log = (
+                f"**Update Terbaru KampangUsergay 🐨 [{branch}]:\n\n📄 CHANGELOG 📄**\n\n"
+            )
+            await message.edit_or_send_as_file(
+                change_log + out, disable_web_page_preview=True
+            )
         else:
-            await message.edit(f'**KampangUsergay is up-to-date with [{branch}]**', del_in=5)
+            await message.edit(f"**KampangUsergay is up-to-date with [{branch}]**", del_in=5)
         return
     if pull_from_repo:
         if out:
-            await message.edit(f'`New update found for [{branch}], Now pulling...`')
+            await message.edit(f"`New update found for [{branch}], Proses Suspen Heroku Anda...`")
             await _pull_from_repo(repo, branch)
-            await CHANNEL.log(f"**PULLED update from [{branch}]:\n\n📄 CHANGELOG 📄**\n\n{out}")
+            await CHANNEL.log(
+                f"**PULLED update from [{branch}]:\n\n📄 CHANGELOG 📄**\n\n{out}"
+            )
             if not push_to_heroku:
-                await message.edit('**Userge Successfully Updated!**\n'
-                                   '`Now restarting... Wait for a while!`', del_in=3)
+                await message.edit(
+                    "**KampangUsergay Successfully Updated!**\n"
+                    "`Now restarting... Wait for a while!`",
+                    del_in=3,
+                )
                 asyncio.get_event_loop().create_task(userge.restart(True))
         elif push_to_heroku:
             await _pull_from_repo(repo, branch)
@@ -89,10 +109,11 @@ async def check_update(message: Message):
                 await message.err(f"already in [{branch}]!")
                 return
             await message.edit(
-                f'`Moving HEAD from [{active}] >>> [{branch}] ...`', parse_mode='md')
+                f"`Moving HEAD from [{active}] >>> [{branch}] ...`", parse_mode="md"
+            )
             await _pull_from_repo(repo, branch)
             await CHANNEL.log(f"`Moved HEAD from [{active}] >>> [{branch}] !`")
-            await message.edit('`Now restarting... Wait for a while!`', del_in=3)
+            await message.edit("`Now restarting... Wait for a while!`", del_in=3)
             asyncio.get_event_loop().create_task(userge.restart())
     if push_to_heroku:
         await _push_to_heroku(message, repo, branch)
@@ -100,16 +121,17 @@ async def check_update(message: Message):
 
 def _get_updates(repo: Repo, branch: str) -> str:
     repo.remote(Config.UPSTREAM_REMOTE).fetch(branch)
-    out = ''
-    upst = Config.UPSTREAM_REPO.rstrip('/')
-    for i in repo.iter_commits(f'HEAD..{Config.UPSTREAM_REMOTE}/{branch}'):
-        out += f"🔨 **#{i.count()}** : [{i.summary}]({upst}/commit/{i}) 🐨 __{i.author}__\n\n"
+    upst = Config.UPSTREAM_REPO.rstrip("/")
+    out = ""
+    upst = Config.UPSTREAM_REPO.rstrip("/")
+    for i in repo.iter_commits(f"HEAD..{Config.UPSTREAM_REMOTE}/{branch}"):
+        out += f"🍭 **#{i.count()}** : [{i.summary}]({upst}/commit/{i}) 🐨 __{i.author}__\n\n"
     return out
 
 
 async def _pull_from_repo(repo: Repo, branch: str) -> None:
     repo.git.checkout(branch, force=True)
-    repo.git.reset('--hard', branch)
+    repo.git.reset("--hard", branch)
     repo.remote(Config.UPSTREAM_REMOTE).pull(branch, force=True)
     await asyncio.sleep(1)
 
@@ -117,15 +139,18 @@ async def _pull_from_repo(repo: Repo, branch: str) -> None:
 async def _push_to_heroku(msg: Message, repo: Repo, branch: str) -> None:
     sent = await msg.edit(
         f'`Sedang mengupdate sekarang [{branch}] ke heroku...\n'
-        'tunggu 5 min dumu yaa asuu`\n\n'
+        'tunggu 5 min duly yaa asuu`\n\n'
         f'* **Restart** sabar kontolllll `{Config.CMD_TRIGGER}restart -h`\n\n'
         '* tunggu setelah KampangUsergay Sukses ter update, lalu cek update kembali :)')
+    
     try:
         await _heroku_helper(sent, repo, branch)
     except GitCommandError as g_e:
         LOG.exception(g_e)
     else:
-        await sent.edit(f"**HEROKU APP : {Config.HEROKU_APP.name} is up-to-date with [{branch}]**")
+        await sent.edit(
+            f"**HEROKU APP : {Config.HEROKU_APP.name} is up-to-date with [{branch}]**"
+        )
 
 
 @pool.run_in_thread
@@ -133,7 +158,7 @@ def _heroku_helper(sent: Message, repo: Repo, branch: str) -> None:
     start_time = time()
     edited = False
 
-    def progress(op_code, cur_count, max_count=None, message=''):
+    def progress(op_code, cur_count, max_count=None, message=""):
         nonlocal start_time, edited
         prog = f"**code:** `{op_code}` **cur:** `{cur_count}`"
         if max_count:
@@ -148,4 +173,6 @@ def _heroku_helper(sent: Message, repo: Repo, branch: str) -> None:
             userge.loop.create_task(sent.try_to_edit(f"{cur_msg}\n\n{prog}"))
 
     cur_msg = sent.text.html
-    repo.remote("heroku").push(refspec=f'{branch}:master', progress=progress, force=True)
+    repo.remote("heroku").push(
+        refspec=f"{branch}:master", progress=progress, force=True
+    )

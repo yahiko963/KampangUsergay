@@ -43,7 +43,7 @@
 ## How To Deploy 
 * With Heroku:
 <p align="center">
-   <a href = KONTOLLL
+   <a href = "https://heroku.com/deploy?template=https://github.com/ManusiaRakitan/KampangUsergay"><img src="https://telegra.ph/file/709419529287ea56cccda.jpg" alt="Pencet aja" width="490px"></a>
 </p>
 <br>
 
